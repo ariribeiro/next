@@ -34,12 +34,15 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Qrcode new generator </title>
+        <title>Gerador de QrCode</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Gerador de QrCode" />
+        <meta property="og:description" content="Gerador de QrCode" />
+        <meta property="og:url" content="https://next.ariribeiro.vercel.app/" />
       </Head>
 
       <main className={styles.main}>
-        <h1>Qrcode Generator</h1>
+        <h1>Gerador de QrCode</h1>
         <p>Gere seu QR Code rápido, fácil e de forma gratuita. 😉</p>
         <form className={classes.root} noValidate autoComplete="off" >
           <TextField id="standard-basic" label="Digite a url" value={url} onChange={e => setarUrl(e.target.value)} />
