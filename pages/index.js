@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Qrcode generator</title>
+        <title>Qrcode new generator </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
