@@ -37,7 +37,7 @@ export default function Home() {
         <title>Gerador de QrCode</title>
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Gerador de QrCode" />
-        <meta property="og:description" content="Gerador de QrCode" />
+        <meta property="og:description" content="Gere seu QR Code rápido, fácil e de forma gratuita. 😉" />
         <meta property="og:url" content="https://next.ariribeiro.vercel.app/" />
       </Head>
 
