@@ -1,7 +1,36 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { makeStyles } from '@material-ui/core/styles';
+var QRCode = require('qrcode.react');
+import TextField from '@material-ui/core/TextField';
+
+import { useState } from 'react'
+import Button from '@material-ui/core/Button';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      margin: theme.spacing(1),
+      width: '25ch',
+    },
+  },
+}));
 
 export default function Home() {
+  const classes = useStyles();
+
+  const [url, setUrl] = useState('');
+
+  const [urlQrCode, seturlQrCode] = useState('');
+
+  function buttonClick() {
+    seturlQrCode(url);
+  }
+
+  function setarUrl(valor) {
+    setUrl(valor);
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -10,12 +39,17 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>Qrcode Generatore</h1>
+        <h1>Qrcode Generator</h1>
         <p>Gere seu QR COde rápido fácil e de forma gratuita</p>
+        <form className={classes.root} noValidate autoComplete="off" >
+          <TextField id="standard-basic" label="Digite a url" value={url} onChange={e => setarUrl(e.target.value)} />
+        </form>
+        <QRCode value={url} />
+        <p>{url}</p>
       </main>
 
       <footer className={styles.footer}>
-        
+
       </footer>
     </div>
   )
