@@ -40,7 +40,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1>Qrcode Generator</h1>
-        <p>Gere seu QR COde rápido fácil e de forma gratuita</p>
+        <p>Gere seu QR Code rápido, fácil e de forma gratuita. 😉</p>
         <form className={classes.root} noValidate autoComplete="off" >
           <TextField id="standard-basic" label="Digite a url" value={url} onChange={e => setarUrl(e.target.value)} />
         </form>
