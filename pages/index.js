@@ -49,7 +49,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-
+      By: <a href="https://instagram.com/ariribeiro.foto" target="_blank">Ari Ribeiro</a>
       </footer>
     </div>
   )
